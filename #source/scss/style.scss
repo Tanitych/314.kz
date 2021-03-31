@@ -378,9 +378,16 @@ h1 {
   -ms-flex-align: center;
   align-items: center;
   font-weight: normal;
-
   line-height: 120%;
   color: #0d0d0d;
+  &.show {
+    .drop__language__btn:before {
+      transform: rotate(-45deg) !important;
+    }
+    .drop__language__btn:after {
+      transform: rotate(45deg) !important;
+    }
+  }
 }
 .drop__language .drop__language__btn {
   display: -webkit-box;
@@ -410,6 +417,7 @@ h1 {
   transform: rotate(45deg);
   right: 6px;
   top: 11px;
+  transition: all ease 0.3s;
 }
 @media (max-width: 767px) {
   .header .drop__language .drop__language__btn:before {
@@ -428,6 +436,7 @@ h1 {
   transform: rotate(-45deg);
   right: 0px;
   top: 11px;
+  transition: all ease 0.3s;
 }
 @media (max-width: 767px) {
   .header .drop__language .drop__language__btn:after {
@@ -489,9 +498,16 @@ h1 {
     display: flex;
     align-items: center;
     color: #222222;
-    .img {
-      margin: 0px 7px 0px 0px;
+    .img_tr {
+      transform: translateX(-8px);
+      transition: all ease 0.3s;
     }
+  }
+  &:hover .img_tr {
+    transform: translateX(-5px);
+  }
+  &:active .img_tr {
+    transform: translateX(-3px);
   }
 }
 
