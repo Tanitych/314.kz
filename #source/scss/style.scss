@@ -1179,10 +1179,16 @@ footer {
     align-items: center;
     justify-content: flex-end;
     font-weight: bold;
+    @media (max-width: 600px) {
+      justify-content: center;
+    }
     .fas {
       opacity: 0;
       transition: all ease 0.4s;
       transform: translate(-35px, 0);
+      @media (max-width: 600px) {
+        transform: translate(-25px, 0);
+      }
     }
   }
   @media (max-width: 600px) {
