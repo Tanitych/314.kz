@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    $('.header__burger').click(function (event) {
-        $('.header__burger,.header__menu').toggleClass('active');
+    $('.header__burger, .header__link').click(function (event) {
+        $('.header__burger,.header__menu, .header__link').toggleClass('active');
         $('body').toggleClass('lock');
     });
 });
@@ -23,3 +23,8 @@ window.onclick = function (event) {
         }
     }
 };
+
+
+$(function () {
+    $("#phone").mask("+7(999) 999-9999");
+});
